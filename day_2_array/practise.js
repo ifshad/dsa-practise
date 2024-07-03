@@ -38,4 +38,4 @@ const maxArea = (array) => {
 };
 
 let nums = [1,5,6,3,4];
-console.log(maxArea(nums));
+// console.log(maxArea(nums));
