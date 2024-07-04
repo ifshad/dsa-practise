@@ -21,4 +21,32 @@ const sortedSquareArray = (array) => {
 let nums = [-2, -1, 0, 1, 2, 3];
 // console.log(sortedSquareArray(nums));
 
-// Q2. 
+// Q2. An array is monotonic if it is either monotone increasing or monotone decreasing. An array is monotonic increasing if all its elements from left to right are non decreasing. An array is monotone decreasing if all its elemnts from left to right are non-increasing. Given an integer array return true if the given array is monotonic or false otherwise.
+
+const monotonicArray = (array) => {
+  let firstPointer = array[0];
+  let lastPointer = array[array.length-1];
+  if (firstPointer === lastPointer) {
+    for (let index = 0; index < array.length-1; index++) {
+      if (array[index+1]!==array[index]) {
+        return false;
+      }
+    }
+  } else if (firstPointer < lastPointer) {
+    for (let index = 0; index < array.length-1; index++) {
+      if (array[index+1] < array[index]) {
+        return false;
+      }
+    }
+  } else {
+    for (let index = 0; index < array.length-1; index++) {
+      if (array[index+1] < array[index]) {
+        return false;
+      }
+    }
+  } 
+  return true;
+}
+
+let monotonic = [1,1,1,1,2, 1];
+console.log(monotonicArray(monotonic));
