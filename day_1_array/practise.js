@@ -49,4 +49,4 @@ const monotonicArray = (array) => {
 }
 
 let monotonic = [1,1,1,1,2, 1];
-console.log(monotonicArray(monotonic));
+// console.log(monotonicArray(monotonic));
